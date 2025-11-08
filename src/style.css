@@ -1,0 +1,281 @@
+/* CSS Reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #111111;
+    min-height: 100vh;
+    padding: 20px;
+    color: #D8D8D8;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+    color: #FFFFFF;
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/* Bento Grid */
+.bento-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Card Styles */
+.card {
+    background: #1E1E1E;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.card h2 {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.card-list, .card-details {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.card-info {
+    grid-column: span 2;
+}
+
+.card-info h3 {
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Pokemon List */
+.pokemon-list {
+    list-style: none;
+    margin-bottom: 20px;
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+.pokemon-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.pokemon-list::-webkit-scrollbar-track {
+    background: #111111;
+    border-radius: 4px;
+}
+
+.pokemon-list::-webkit-scrollbar-thumb {
+    background: #444444;
+    border-radius: 4px;
+}
+
+.pokemon-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    background: #2A2A2A;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.pokemon-item:hover {
+    background: #333333;
+    transform: translateX(4px);
+}
+
+.pokemon-name {
+    font-weight: 500;
+    font-size: 1.05rem;
+    text-transform: capitalize;
+}
+
+/* Buttons */
+.btn-details {
+    background: #4A5FD9;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-details:hover {
+    background: #5B6FE8;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn-nav {
+    background: #2A2A2A;
+    color: #D8D8D8;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-nav:hover:not(:disabled) {
+    background: #3A3A3A;
+}
+
+.btn-nav:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.btn-next {
+    background: #606757;
+    color: #000000;
+}
+
+.btn-next:hover:not(:disabled) {
+    background: #869467;
+}
+
+.page-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.page-btn {
+    background: #2A2A2A;
+    color: #D8D8D8;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    min-width: 42px;
+    transition: all 0.2s ease;
+}
+
+.page-btn:hover {
+    background: #3A3A3A;
+}
+
+.page-btn.active {
+    background: #FFFFFF;
+    color: #111111;
+}
+
+/* Details Section */
+.detail-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 500px;
+}
+
+.detail-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.detail-header h2 {
+    text-transform: capitalize;
+}
+
+.pokemon-sprite {
+    width: 200px;
+    height: 200px;
+    image-rendering: pixelated;
+    margin-bottom: 20px;
+    background: #2A2A2A;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.detail-info {
+    width: 100%;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #2A2A2A;
+}
+
+.label {
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.value {
+    color: #D8D8D8;
+    text-transform: capitalize;
+}
+
+/* Utility States */
+.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #666666;
+    font-size: 1.2rem;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #4A5FD9;
+    font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .bento-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card-list, .card-details {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .bento-container {
+        grid-template-columns: 1fr;
+    }
+    .card-list, .card-details, .card-info {
+        grid-column: span 1;
+    }
+}

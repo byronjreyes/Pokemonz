@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Browser</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Pokemon Browser</h1>
+      <p>Explore the Pokemon dex universe</p>
+    </header>
+
+    <!-- BEnto design grid-->
+    <div class="bento-container">
+      <div class="card card-info">
+        <h3>How to use?</h3>
+        <p>Click any Pokemon in Pokemon list to view details</p>
+      </div>
+
+      <!-- page 1 Pokemon List -->
+      <div class="card card-list">
+        <h2>Pokemon List (Page <span id="pageNumber">1</span>)</h2>
+        <ul id="pokemonList" class="pokemon-list"></ul>
+
+        <div class="pagination">
+          <button id="prevBtn" class="btn-nav">Prev</button>
+          <div id="pageButtons" class="page-buttons"></div>
+          <button id="nextBtn" class="btn-nav btn-next">Next</button>
+        </div>
+      </div>
+
+      <!-- page 2 Pokemon Details -->
+      <div class="card card-details">
+        <h2>Details</h2>
+        <div id="detailSection" class="detail-content">
+          <div class="placeholder">
+            <p>Select a Pokemon</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info cards -->
+      <div class="card card-info">
+        <h3>Total list of Pokemon</h3>
+        <p id="totalPokemon">1302 Pokemon</p>
+      </div>
+    </div>
+
+    <script src="src/script.js"></script>
+  </body>
+</html>
